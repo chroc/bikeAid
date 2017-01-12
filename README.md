@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+bikeAid
 
-Things you may want to cover:
+Cycle related legal information provided in times of need.  
 
-* Ruby version
+API
+Google Places API used for determining location of available resources and law firms after a road incident has occurred.  
 
-* System dependencies
+Ruby Gem Documentation can be found on the link below.  
 
-* Configuration
+gem 'google_places'
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/qpowell/google_places
