@@ -1,4 +1,4 @@
-### bikeAid
+# bikeAid
 
 Cycle related legal information provided in times of need.  
 
@@ -15,7 +15,7 @@ https://github.com/qpowell/google_places
 
 The project was broken down into different components following a user story and brainstormed within the team on the white board. Models were created to form the foundation of the app.  Later, multiple tables were added and their relationships formed the basis for the the model interactions. The resulting flow looked like this:
 
-![Models](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/)
+![Models](https://github.com/tecurtain/bikeAid/blob/master/app/assets/images/models.png?raw=true)
 
 Ruby documentation was used where methods were unclear or unfamiliar.  
 
@@ -23,7 +23,8 @@ Console.rb file, and Pry were used extensively during the coding process to test
 
 Table relationships were mapped out using diagrams on the white board to determine how to structure our table.  
 
-![Table Relationship](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/)
+![Table Relationship](https://github.com/tecurtain/bikeAid/blob/master/app/assets/images/models+relationships+goals.jpg?raw=true)
+
 
 Everything was documented in Trello and the Readme file as events occurred.  This helped with keeping track of tasked assigned to individual team members as well as keep an up to date inventory of the app construction.  
 
