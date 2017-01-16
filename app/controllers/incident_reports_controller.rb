@@ -1,11 +1,7 @@
 class IncidentReportsController < ApplicationController
 
-  def index
-    @incident_reports = Incident_Report.all
-  end
-
   def create
-    @incident_report = Incident_Report.create(incident_report_params)
+    @incident_report = Incident_Report.new(incident_report_params)
     if @incident_report.save
       render json: @incident_report
     end
@@ -13,7 +9,7 @@ class IncidentReportsController < ApplicationController
 
   def update
     @incident_report = Incident_Report.find_by(id: params[:id])
-    @incident_report.update(user_params)
+    @incident_report.update(incident_report_params)
     if @incident_report.save
       render json: @incident_report
     end

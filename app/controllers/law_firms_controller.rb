@@ -1,11 +1,7 @@
 class LawFirmsController < ApplicationController
 
-  def index
-    @law_firms = Law_Firm.all
-  end
-
   def create
-    @law_firm = Law_Firm.create(user_params)
+    @law_firm = Law_Firm.new(law_firm_params)
     if @law_firm.save
       render json: @law_firm
     end
@@ -13,7 +9,7 @@ class LawFirmsController < ApplicationController
 
   def update
     @law_firm = Law_Firm.find_by(id: params[:id])
-    @law_firm.update(user_params)
+    @law_firm.update(law_firm_params)
     if @law_firm.save
       render json: @law_firm
     end

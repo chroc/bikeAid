@@ -1,5 +1,5 @@
-var view = new UsersView({
-  collection: users
+var lawFirmsView = new LawFirmsView({
+  collection: lawFirms
 });
 
-$('#list').append(view.render().el);
+$('#list').append(lawFirmsView.render().el);

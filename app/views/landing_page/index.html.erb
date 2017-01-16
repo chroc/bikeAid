@@ -1,0 +1,19 @@
+<h1>Landing Page</h1>
+
+<div id='list'></div>
+
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+<script src="http://backbonejs.org/backbone-min.js"></script>
+<script src="/javascript/templates.js"></script>
+<script src="/javascript/models/LawFirm.js"></script>
+<script src="/javascript/collections/LawFirms.js"></script>
+<script src="/javascript/views/LawFirmsView.js"></script>
+<script src="/javascript/views/LawFirmView.js"></script>
+
+<script>
+  var lawFirms = new LawFirms();
+  lawFirms.reset(<%= raw(@law_firms.to_json) %>);
+</script>
+
+<script src="/javascript/app.js"></script>
