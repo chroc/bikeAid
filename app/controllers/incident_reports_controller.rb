@@ -1,6 +1,9 @@
 class IncidentReportsController < ApplicationController
 
-  def create
+    def new
+    end
+
+    def create
     @incident_report = Incident_Report.new(incident_report_params)
     if @incident_report.save
       render json: @incident_report
