@@ -25,6 +25,9 @@ Table relationships were mapped out using diagrams on the white board to determi
 
 ![Table Relationship](https://github.com/tecurtain/bikeAid/blob/master/app/assets/images/models+relationships+goals.jpg?raw=true)
 
+When moving forward with the project, we conceptualized how the pages were going to look by drawing out how our views would render.   
+![Views Layout](https://github.com/tecurtain/bikeAid/blob/master/app/assets/images/?)
+
 
 Everything was documented in Trello and the Readme file as events occurred.  This helped with keeping track of tasked assigned to individual team members as well as keep an up to date inventory of the app construction.  
 
