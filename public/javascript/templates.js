@@ -13,6 +13,6 @@ templates['lawFirm'] = template({"compiler":[7,">= 4.0.0"],"main":function(conta
     + alias4(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"email","hash":{},"data":data}) : helper)))
     + "</p>\n<p class='phone_number'>"
     + alias4(((helper = (helper = helpers.phone_number || (depth0 != null ? depth0.phone_number : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"phone_number","hash":{},"data":data}) : helper)))
-    + "</p>\n";
+    + "</p>\n<hr>\n";
 },"useData":true});
 })();
