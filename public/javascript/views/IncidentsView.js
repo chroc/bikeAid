@@ -4,8 +4,8 @@ var IncidentsView = Backbone.View.extend({
   // idName
 
   render: function() {
-    this.collection.forEach(function(lawFirm) {
-        var view = new IncidentsView({ model: incident });
+    this.collection.forEach(function(incident) {
+        var view = new IncidentView({ model: incident });
         this.$el.append(view.render().el);
     }, this);
     return this;

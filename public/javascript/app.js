@@ -9,3 +9,11 @@ var usersView = new UsersView({
 });
 
 $('#users').append(usersView.render().el);
+
+$('#list').append(lawFirmsView.render().el);
+
+var incidentsView = new IncidentsView({
+  collection: incidents
+});
+
+$('#list').append(incidentsView.render().el);
