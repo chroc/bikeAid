@@ -1,4 +1,4 @@
-var Incident_Report = Backbone.Model.extend({
+var IncidentReport = Backbone.Model.extend({
   updateProps: function(element) {
     this.set(element.className, element.textContent);
     this.save();

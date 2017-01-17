@@ -3,3 +3,9 @@ var lawFirmsView = new LawFirmsView({
 });
 
 $('#list').append(lawFirmsView.render().el);
+
+var incidentsView = new IncidentsView({
+  collection: incidents
+});
+
+$('#list').append(incidentsView.render().el);
