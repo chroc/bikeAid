@@ -3,7 +3,7 @@ var UserView = Backbone.View.extend({
 
   events: {
     'focusout .name': 'updateModel',
-    'focusout .username': 'updateModel'
+    'focusout .username': 'updateModel',
     'focusout .location': 'updateModel'
   },
 

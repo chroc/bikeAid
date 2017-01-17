@@ -1,6 +1,8 @@
 <h1>Landing Page</h1>
 
-<div id='list'></div>
+<div id='law-firms'></div>
+
+<div id='users'></div>
 
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
@@ -10,10 +12,22 @@
 <script src="/javascript/collections/LawFirms.js"></script>
 <script src="/javascript/views/LawFirmsView.js"></script>
 <script src="/javascript/views/LawFirmView.js"></script>
+<script src="/javascript/models/User.js"></script>
+<script src="/javascript/collections/Users.js"></script>
+<script src="/javascript/views/UsersView.js"></script>
+<script src="/javascript/views/UserView.js"></script>
+
 
 <script>
+
   var lawFirms = new LawFirms();
   lawFirms.reset(<%= raw(@law_firms.to_json) %>);
+
+  var users = new Users();
+  users.reset(<%= raw(@users.to_json) %>);
+
 </script>
+
+
 
 <script src="/javascript/app.js"></script>

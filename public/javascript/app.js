@@ -2,4 +2,10 @@ var lawFirmsView = new LawFirmsView({
   collection: lawFirms
 });
 
-$('#list').append(lawFirmsView.render().el);
+$('#law-firms').append(lawFirmsView.render().el);
+
+var usersView = new UsersView({
+  collection: users
+});
+
+$('#users').append(usersView.render().el);
