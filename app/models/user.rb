@@ -13,4 +13,13 @@ class User < ApplicationRecord
     message: "invalid email"
   }
 
+  before_validation :set_super_user
+
+  private
+  def set_super_user
+    if self.super_user.nil?
+      self.super_user = false
+    end
+  end
+
 end
