@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'landing_page#index'
 
-  get '/admin', to: 'admin#index'
+  get '/admin', to: 'admins#index'
 
   resources :incident_reports
 
