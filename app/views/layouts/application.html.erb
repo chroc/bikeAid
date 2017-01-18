@@ -9,6 +9,31 @@
   </head>
 
   <body>
+    <div>
+      <header>
+        <h1><a href="/">Bike Aid</a></h1>
+      </header>
+
+      <div class="navbar">
+        <% if logged_in? %>
+        <a href="/user" >My Account</a>
+        <% end %>
+        <a href="/resources" >Resources</a>
+        <% unless logged_in? %>
+        <a href="/users/new" >Sign Up</a>
+        <% end %>
+        <% unless logged_in? %>
+        <a href="/login" >Login</a>
+        <% end %>
+        <% if logged_in? %>
+        <form action="/logout" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <input type="submit" value="Logout" />
+        </form>
+        <% end %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
