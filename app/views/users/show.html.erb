@@ -1,0 +1,13 @@
+<h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
+<p> <b>Email: </b> <%= @user.email %></p>
+<p> <b>Address: </b> <%= @user.address %></p>
+<p> <b>City: </b> <%= @user.city %></p>
+<p> <b>State: </b> <%= @user.state %></p>
+<p> <b>Post Code: </b> <%= @user.post_code %></p>
+
+<h3>My Incident Reports</h3>
+<ul>
+  <% @incident_reports.each do |incident| %>
+    <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} - #{incident.location}" %></a></li>
+  <% end %>
+</ul>

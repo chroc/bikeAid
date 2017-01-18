@@ -26,6 +26,11 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  def show
+    @user = User.find_by(id: params[:id])
+    @incident_reports = @user.incident_reports
+  end
+
   def user_params
     params.permit(:first_name, :last_name, :email, :phone, :password, :address, :city, :state, :postcode)
   end
