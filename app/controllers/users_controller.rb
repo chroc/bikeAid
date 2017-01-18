@@ -15,9 +15,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    @user.update(user_params)
-    if @user.save
-      render json: @user
+
+    if @user.update(user_params)
+      # render json: @user
+      redirect_to "/users/#{@user.id}"
     end
   end
 
@@ -29,6 +30,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @incident_reports = @user.incident_reports
+  end
+
+  def edit
+    @user = User.find_by(id: params[:id])
   end
 
   def user_params

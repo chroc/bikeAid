@@ -1,4 +1,4 @@
-<h2>Edit incident report</h2>
+<h2>Edit Incident Report</h2>
 
 <form class="" action="/incident_reports/<%= @incident_report.id %>" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -16,5 +16,5 @@
   <label>Private health</label>
   <input type="text" name="private_health" value="<%= @incident_report.private_health %>"><br>
 
-  <button type="submit">Submit</button>
+  <button type="submit">Update</button>
 </form>

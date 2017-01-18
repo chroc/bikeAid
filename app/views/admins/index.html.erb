@@ -1,6 +1,13 @@
 <h2>Users</h2>
 <ul>
   <% @users.each do |user| %>
-    <li><%= "#{user.first_name} #{user.last_name}" %></li>
+    <li> <a href="/users/<%= user.id %>"><%= "#{user.first_name} #{user.last_name}" %></a></li>
+  <% end %>
+</ul>
+
+<h2>Incident Reports</h2>
+<ul>
+  <% @incident_reports.each do |incident| %>
+    <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} #{incident.location}" %></a></li>
   <% end %>
 </ul>
