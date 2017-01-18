@@ -1,7 +1,30 @@
+.container {
+  align: center;
+  font-weight: 300;
+}
+
+ul.bold {
+  font-weight: bold;
+}
+
+h3.heading {
+  font-weight: 200;
+}
+
+h4.heading {
+  font-weight: 300;
+}
+
 .title  {
   margin: 10px;
 }
 
 .resources {
-  margin: 25px;
+  background: #E9E9E9;
+  border-radius: 8px;
+  border: 2px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 70%;
 }
