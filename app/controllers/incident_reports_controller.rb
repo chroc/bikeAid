@@ -1,5 +1,6 @@
 class IncidentReportsController < ApplicationController
   before_action :grab_incidents, only: [:edit, :show, :destroy, :update]
+  # before_action :users_incidents, only: [:edit, :show, :destroy, :update]
 
   def new
   end
@@ -7,6 +8,7 @@ class IncidentReportsController < ApplicationController
   def create
     @incident_report = IncidentReport.new(incident_report_params)
     @law_firm = LawFirm.find_by(id: @incident_report.law_firm_id)
+    @incident_report.user = current_user
     if @incident_report.save
       LawFirmMailer.new_incident_report(@law_firm).deliver_now
       render json: @incident_report
@@ -33,10 +35,15 @@ class IncidentReportsController < ApplicationController
   private
   def incident_report_params
     params.permit(:location, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information, :user_id, :law_frim_id)
+    params.permit(:address, :city, :state, :postcode, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information)
   end
 
   def grab_incidents
     @incident_report = IncidentReport.find_by(id: params[:id])
   end
+
+  # def users_incidents
+  #
+  # end
 
 end

@@ -3,6 +3,8 @@
 
         <form class="well form-horizontal" action=" " method="post"  id="incident_report">
     <fieldset>
+      <form class="well form-horizontal" action="/incident_reports" method="post"  id="incident_report">
+  <fieldset>
 
     <!-- Form Name -->
     <legend >Incident Report</legend>
@@ -16,6 +18,12 @@
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
       <input name="address" placeholder="Address" class="form-control" type="text">
         </div>
+  <div class="form-group">
+    <label class="col-md-4 control-label">Location of Incident</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+    <input name="address" placeholder="Address" class="form-control" type="text">
       </div>
     </div>
 
@@ -88,6 +96,90 @@
           });
       });
   </script>
+  <div class="form-group">
+    <label class="col-md-4 control-label">Date</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input name="date" data-date-end-date="0d" placeholder="Date" class="form-control"  type="text">
+      </div>
+  </div>
+  </div>
+
+<script type="text/javascript">
+    $(function () {
+      var options={
+        format: 'dd/mm/yyyy',
+        todayHighlight: true,
+        autoclose: true,
+      };
+      $('input[name="date"]').datepicker(options).on('changeDate', function(e) {
+            // Revalidate the date field
+            $('#incident_report').bootstrapValidator('revalidateField', 'date');
+        });
+    });
+</script>
+
+  <!-- Text area -->
+
+  <div class="form-group">
+    <label class="col-md-4 control-label">Incident Description</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          	<textarea class="form-control" name="description" placeholder="Incident Description"></textarea>
+    </div>
+    </div>
+  </div>
+
+    <!-- radio checks -->
+     <div class="form-group">
+                            <label class="col-md-4 control-label">Were the police invovled?</label>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="police_involved" value="TRUE" /> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="police_involved" value="FALSE" /> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    <!-- radio checks -->
+     <div class="form-group">
+                            <label class="col-md-4 control-label">Was an ambulance present?</label>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ambulance_involved" value="TRUE" /> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="ambulance_involved" value="FALSE" /> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    <!-- radio checks -->
+     <div class="form-group">
+                            <label class="col-md-4 control-label">Do you have private health insurance?</label>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="private_health" value="TRUE" /> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="private_health" value="FALSE" /> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
     <!-- Text area -->
 
