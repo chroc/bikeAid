@@ -13,7 +13,7 @@
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-    <input name="location" placeholder="Location" class="form-control" type="text">
+    <input name="address" placeholder="Address" class="form-control" type="text">
       </div>
     </div>
   </div>
@@ -77,7 +77,7 @@
 <script type="text/javascript">
     $(function () {
       var options={
-        format: 'mm/dd/yyyy',
+        format: 'dd/mm/yyyy',
         todayHighlight: true,
         autoclose: true,
       };
@@ -95,7 +95,7 @@
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          	<textarea class="form-control" name="incident_description" placeholder="Incident Description"></textarea>
+          	<textarea class="form-control" name="description" placeholder="Incident Description"></textarea>
     </div>
     </div>
   </div>
@@ -106,12 +106,12 @@
                             <div class="col-md-4">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting1" value="yes" /> Yes
+                                        <input type="radio" name="police_involved" value="TRUE" /> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting1" value="no" /> No
+                                        <input type="radio" name="police_involved" value="FALSE" /> No
                                     </label>
                                 </div>
                             </div>
@@ -122,12 +122,12 @@
                             <div class="col-md-4">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting2" value="yes" /> Yes
+                                        <input type="radio" name="ambulance_involved" value="TRUE" /> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting2" value="no" /> No
+                                        <input type="radio" name="ambulance_involved" value="FALSE" /> No
                                     </label>
                                 </div>
                             </div>
@@ -138,12 +138,12 @@
                             <div class="col-md-4">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting3" value="yes" /> Yes
+                                        <input type="radio" name="private_health" value="TRUE" /> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting3" value="no" /> No
+                                        <input type="radio" name="private_health" value="FALSE" /> No
                                     </label>
                                 </div>
                             </div>

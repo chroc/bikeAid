@@ -7,6 +7,8 @@ class IncidentReportsController < ApplicationController
 
   def create
     @incident_report = IncidentReport.new(incident_report_params)
+    @incident_report.user = current_user
+    binding.pry
     if @incident_report.save
       render json: @incident_report
     end
@@ -32,7 +34,7 @@ class IncidentReportsController < ApplicationController
 
   private
   def incident_report_params
-    params.permit(:location, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information)
+    params.permit(:address, :city, :state, :postcode, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information)
   end
 
   def grab_incidents

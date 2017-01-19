@@ -51,7 +51,8 @@ $(document).ready(function() {
                       message: 'Please enter the accident date'
                   },
                   date: {
-                      message: 'Please supply a vaild date'
+                      message: 'Please supply a vaild date',
+                      format: 'DD/MM/YYYY'
                   }
               }
           },
