@@ -6,6 +6,8 @@
   padding-right: 20px;
   padding-bottom: 20px;
   width: 70%;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .landing_page_title {
@@ -37,7 +39,9 @@
 }
 
 form.well {
-  padding: 60px 300px;
+  padding: 60px 80px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .col-md-4.full_width {
