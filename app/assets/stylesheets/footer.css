@@ -1,0 +1,27 @@
+/* Mostly: http://ryanfait.com/sticky-footer/ */
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.container{
+  min-height: 95%;
+  /* equal to footer height */
+	margin-bottom: -142px;
+}
+.container:after {
+  content: "";
+  display: block;
+}
+.footer, .container:after {
+  /* .push must be the same height as footer */
+	height: 162px;
+}
+.footer {
+  background: #FDFDFD;
+  border-top: 2px solid #E7E7E7;
+  text-align: center;
+  padding: 50px;
+}

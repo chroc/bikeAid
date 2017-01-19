@@ -1,42 +1,23 @@
-<h2>Law Firms</h2>
-<div id='law-firms'></div>
+<div class="container">
+  <div class="landing_page">
 
-<h2>Users</h2>
-<div id='users'></div>
+    <h2 class='landing_page_title'>BikeAid</h2>    <p>BikeAid was conceived out of the desire to help those in need during the stressful moments surrounding a bike accident.</p>    <p>This image from Vic Roads illustrates the challenge facing cyclists in Melbourne everyday.</p>    <p>This site exists to provide vital information in the event of an incident while also connecting you with the legal aid and resources you need.</p>    <br><div class="image">    <p><%= image_tag "bikeAidSafety.png" %></p>    </div>    <div class='link'><p><a href="https://www.vicroads.vic.gov.au/safety-and-road-rules/safety-statistics/crash-statistics">Vic Roads Crash Statistics</a></p></div>      <script src="http://underscorejs.org/underscore-min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+      <script src="http://backbonejs.org/backbone-min.js"></script>
+      <script src="/javascript/templates.js"></script>
+      <script src="/javascript/models/LawFirm.js"></script>
+      <script src="/javascript/collections/LawFirms.js"></script>
+      <script src="/javascript/models/IncidentReport.js"></script>
+      <script src="/javascript/collections/IncidentReports.js"></script>
+      <script src="/javascript/views/LawFirmsView.js"></script>
+      <script src="/javascript/views/LawFirmView.js"></script>
+      <script src="/javascript/models/User.js"></script>
+      <script src="/javascript/collections/Users.js"></script>
+      <script src="/javascript/views/UsersView.js"></script>
+      <script src="/javascript/views/UserView.js"></script>
+      <script src="/javascript/views/IncidentsView.js"></script>
+      <script src="/javascript/views/IncidentView.js"></script>
 
-<h2>Incident Reports</h2>
-<div id='incident-reports'></div>
-
-<script src="http://underscorejs.org/underscore-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-<script src="http://backbonejs.org/backbone-min.js"></script>
-<script src="/javascript/templates.js"></script>
-<script src="/javascript/models/LawFirm.js"></script>
-<script src="/javascript/collections/LawFirms.js"></script>
-<script src="/javascript/models/IncidentReport.js"></script>
-<script src="/javascript/collections/IncidentReports.js"></script>
-<script src="/javascript/views/LawFirmsView.js"></script>
-<script src="/javascript/views/LawFirmView.js"></script>
-<script src="/javascript/models/User.js"></script>
-<script src="/javascript/collections/Users.js"></script>
-<script src="/javascript/views/UsersView.js"></script>
-<script src="/javascript/views/UserView.js"></script>
-<script src="/javascript/views/IncidentsView.js"></script>
-<script src="/javascript/views/IncidentView.js"></script>
-
-<script>
-
-  var lawFirms = new LawFirms();
-  lawFirms.reset(<%= raw(@law_firms.to_json) %>);
-
-  var users = new Users();
-  users.reset(<%= raw(@users.to_json) %>);
-
-  var incidents = new IncidentReports();
-  incidents.reset(<%= raw(@incident_reports.to_json) %>);
-
-</script>
-
-
-
-<script src="/javascript/app.js"></script>
+    <script src="/javascript/app.js"></script>
+  </div> <!-- .landing_page -->
+</div> <!-- .container -->

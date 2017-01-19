@@ -1,50 +1,51 @@
-
-<div id="login-overlay" class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> -->
-          <h4 class="modal-title" id="myModalLabel">Login to BikeAid</h4>
-      </div>
-      <div class="modal-body">
-          <div class="row">
-              <div class="col-xs-6">
-                  <div class="well">
-                      <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
-                          <div class="form-group">
-                              <label for="username" class="control-label">Username</label>
-                              <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
-                              <span class="help-block"></span>
-                          </div>
-                          <div class="form-group">
-                              <label for="password" class="control-label">Password</label>
-                              <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-                              <span class="help-block"></span>
-                          </div>
-                          <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
-                          <div class="checkbox">
-                              <label>
-                                  <input type="checkbox" name="remember" id="remember"> Remember login
-                              </label>
-                              <p class="help-block">(if this is a private computer)</p>
-                          </div>
-                          <button type="submit" class="btn btn-success btn-block">Login</button>
-                          <a href="/" class="btn btn-default btn-block">Back to homepage</a>
-                      </form>
-                  </div>
-              </div>
-              <div class="col-xs-6">
-                  <p class="lead">Create your <span class="text-success">incident report.</span></p>
-                  <ul class="list-unstyled" style="line-height: 2">
-                      <li><span class="fa fa-check text-success"></span> Connect with legal aid</li>
-                      <li><span class="fa fa-check text-success"></span> Find local bike resources</li>
-                      <li><span class="fa fa-check text-success"></span> View previous reports</li>
-                      <li><span class="fa fa-check text-success"></span> Experienced incident facilitators</li>
-                      <li><span class="fa fa-check text-success"></span> Built for cyclist, by cyclist</li>
-                      <li><a href="/resources"><u>FAQ's</u></a></li>
-                  </ul>
-                  <p><a href="/users/new" class="btn btn-info btn-block">Say no more, sign me up!</a></p>
-              </div>
-          </div>
-      </div>
+<div class="container">
+  <div id="login-overlay" class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> -->
+            <h4 class="modal-title, landing_page_title" id="myModalLabel">Login to BikeAid</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="well">
+                        <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                            <div class="form-group">
+                                <label for="username" class="control-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                <span class="help-block"></span>
+                            </div>
+                            <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" id="remember"> Remember login
+                                </label>
+                                <p class="help-block">(if this is a private computer)</p>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                            <a href="/" class="btn btn-default btn-block">Back to homepage</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <p class="lead">Create your <span class="text-success">incident report.</span></p>
+                    <ul class="list-unstyled" style="line-height: 2">
+                        <li><span class="fa fa-check text-success"></span> Connect with legal aid</li>
+                        <li><span class="fa fa-check text-success"></span> Find local bike resources</li>
+                        <li><span class="fa fa-check text-success"></span> View previous reports</li>
+                        <li><span class="fa fa-check text-success"></span> Experienced incident facilitators</li>
+                        <li><span class="fa fa-check text-success"></span> Built for cyclist, by cyclist</li>
+                        <li><a href="/resources"><u>FAQ's</u></a></li>
+                    </ul>
+                    <p><a href="/users/new" class="btn btn-info btn-block">Say no more, sign me up!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
