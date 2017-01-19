@@ -9,161 +9,6 @@
 
                 <!-- Text input-->
 
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Address</label>
-        <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-      <input name="address" placeholder="Address" class="form-control" type="text">
-        </div>
-  <div class="form-group">
-    <label class="col-md-4 control-label">Location of Incident</label>
-      <div class="col-md-4 inputGroupContainer">
-      <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-    <input name="address" placeholder="Address" class="form-control" type="text">
-      </div>
-    </div>
-
-    <!-- Text input-->
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">City</label>
-        <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-      <input name="city" placeholder="City" class="form-control"  type="text">
-        </div>
-      </div>
-    </div>
-
-    <!-- Select Basic -->
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">State</label>
-        <div class="col-md-4 selectContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="state" class="form-control selectpicker" >
-          <option value=" " >Please select your state</option>
-          <option>New South Wales</option>
-          <option>Queensland</option>
-          <option>South Australia</option>
-          <option>Tasmania</option>
-          <option>Victoria</option>
-          <option>Western Australia</option>
-        </select>
-      </div>
-    </div>
-    </div>
-
-    <!-- Select Basic -->
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Law Firm</label>
-        <div class="col-md-4 selectContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="lawFirm" class="form-control selectpicker" >
-          <option value=" " >Please select the law firm</option>
-          <% @law_firms.each do |law_firm| %>
-            <option value="<%= law_firm.id %>"><%= law_firm.company_name %></option>
-          <% end %>
-        </select>
-      </div>
-    </div>
-    </div>
-
-    <!-- Text input-->
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Post Code</label>
-        <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-      <input name="postcode" placeholder="Post Code" class="form-control"  type="text">
-        </div>
-    </div>
-    </div>
-
-    <!-- Text input-->
-
-    <div class="form-group">
-      <label class="col-md-4 control-label">Date</label>
-        <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-      <input name="date" data-date-end-date="0d" placeholder="Date" class="form-control"  type="text">
-        </div>
-    </div>
-    </div>
-
-  <script type="text/javascript">
-      $(function () {
-        var options={
-          format: 'mm/dd/yyyy',
-          todayHighlight: true,
-          autoclose: true,
-        };
-        $('input[name="date"]').datepicker(options).on('changeDate', function(e) {
-              // Revalidate the date field
-              $('#incident_report').bootstrapValidator('revalidateField', 'date');
-          });
-      });
-  </script>
-  <div class="form-group">
-    <label class="col-md-4 control-label">Date</label>
-      <div class="col-md-4 inputGroupContainer">
-      <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-    <input name="date" data-date-end-date="0d" placeholder="Date" class="form-control"  type="text">
-      </div>
-  </div>
-  </div>
-
-<script type="text/javascript">
-    $(function () {
-      var options={
-        format: 'dd/mm/yyyy',
-        todayHighlight: true,
-        autoclose: true,
-      };
-      $('input[name="date"]').datepicker(options).on('changeDate', function(e) {
-            // Revalidate the date field
-            $('#incident_report').bootstrapValidator('revalidateField', 'date');
-        });
-    });
-</script>
-
-  <!-- Text area -->
-
-  <div class="form-group">
-    <label class="col-md-4 control-label">Incident Description</label>
-      <div class="col-md-4 inputGroupContainer">
-      <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          	<textarea class="form-control" name="description" placeholder="Incident Description"></textarea>
-    </div>
-    </div>
-  </div>
-
-    <!-- radio checks -->
-     <div class="form-group">
-                            <label class="col-md-4 control-label">Were the police invovled?</label>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="police_involved" value="TRUE" /> Yes
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="police_involved" value="FALSE" /> No
-                                    </label>
-                                </div>
-                            </div>
-
                 <div class="form-group">
                     <label class="col-md-4 control-label">Address</label>
                     <div class="col-md-4 inputGroupContainer">
@@ -172,7 +17,6 @@
                                 <i class="glyphicon glyphicon-home"></i>
                             </span>
                             <input name="address" placeholder="Address" class="form-control" type="text">
-
                         </div>
                     </div>
                 </div>
@@ -203,7 +47,6 @@
                             <select name="state" class="form-control selectpicker">
                                 <option value=" ">Please select your state</option>
                                 <option>New South Wales</option>
-                                <option>Northern Territory</option>
                                 <option>Queensland</option>
                                 <option>South Australia</option>
                                 <option>Tasmania</option>
@@ -224,6 +67,25 @@
                                 <i class="glyphicon glyphicon-home"></i>
                             </span>
                             <input name="postcode" placeholder="Post Code" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Law Firm</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-list"></i>
+                            </span>
+                            <select name="lawFirm" class="form-control selectpicker">
+                                <option value=" ">Please select the law firm</option>
+                                <% @law_firms.each do |law_firm| %>
+                                <option value="<%= law_firm.id %>"><%= law_firm.company_name %></option>
+                                <% end %>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -265,7 +127,7 @@
                             <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-pencil"></i>
                             </span>
-                            <textarea class="form-control" name="incident_description" placeholder="Incident Description"></textarea>
+                            <textarea class="form-control" name="description" placeholder="Incident Description"></textarea>
                         </div>
                     </div>
                 </div>
@@ -276,13 +138,13 @@
                     <div class="col-md-4">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="police_invloved" value="TRUE"/>
+                                <input type="radio" name="hosting1" value="yes"/>
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="police_invloved" value="FALSE"/>
+                                <input type="radio" name="hosting1" value="no"/>
                                 No
                             </label>
                         </div>
@@ -294,13 +156,13 @@
                     <div class="col-md-4">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="ambulance_invloved" value="TRUE"/>
+                                <input type="radio" name="hosting2" value="yes"/>
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="ambulance_invloved" value="FALSE"/>
+                                <input type="radio" name="hosting2" value="no"/>
                                 No
                             </label>
                         </div>
@@ -312,13 +174,13 @@
                     <div class="col-md-4">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="private_health" value="TRUE"/>
+                                <input type="radio" name="hosting3" value="yes"/>
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="private_health" value="FALSE"/>
+                                <input type="radio" name="hosting3" value="no"/>
                                 No
                             </label>
                         </div>
