@@ -6,6 +6,8 @@
 <p> <b>State: </b> <%= @user.state %></p>
 <p> <b>Post Code: </b> <%= @user.postcode %></p>
 
+<a href="/users/<%= @user.id %>/edit">Edit user</a>
+
 <h3>My Incident Reports</h3>
 <ul>
   <% @incident_reports.each do |incident| %>
