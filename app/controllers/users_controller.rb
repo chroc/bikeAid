@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
+  before_action :grab_user, only: [:edit, :show, :destroy, :update]
+  before_action :ensure_correct_user, except: [:new, :create]
 
   def new
   end
@@ -11,8 +14,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(id: params[:id])
-
     if @user.update(user_params)
       # render json: @user
       redirect_to "/users/#{@user.id}"
@@ -20,21 +21,29 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by(id: params[:id])
     @user.destroy
   end
 
   def show
-    @user = User.find_by(id: params[:id])
     @incident_reports = @user.incident_reports
   end
 
   def edit
+  end
+
+  private
+  def user_params
+    params.permit(:first_name, :last_name, :email, :phone, :password, :address, :city, :state, :postcode)
+  end
+
+  def grab_user
     @user = User.find_by(id: params[:id])
   end
 
-  def user_params
-    params.permit(:first_name, :last_name, :email, :phone, :password, :address, :city, :state, :postcode)
+  def ensure_correct_user
+    unless params[:id].to_i == current_user.id
+      redirect_to current_user
+    end
   end
 
 end

@@ -1,4 +1,5 @@
 class IncidentReportsController < ApplicationController
+  before_action :grab_incidents, only: [:edit, :show, :destroy, :update]
 
   def new
   end
@@ -12,7 +13,6 @@ class IncidentReportsController < ApplicationController
   end
 
   def update
-    @incident_report = IncidentReport.find_by(id: params[:id])
     @incident_report.update(incident_report_params)
     if @incident_report.save
       # render json: @incident_report
@@ -21,20 +21,22 @@ class IncidentReportsController < ApplicationController
   end
 
   def destroy
-    @incident_report = IncidentReport.find_by(id: params[:id])
     @incident_report.destroy
   end
 
   def show
-    @incident_report = IncidentReport.find_by(id: params[:id])
   end
 
   def edit
-    @incident_report = IncidentReport.find_by(id: params[:id])
   end
 
+  private
   def incident_report_params
     params.permit(:location, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information)
+  end
+
+  def grab_incidents
+    @incident_report = IncidentReport.find_by(id: params[:id])
   end
 
 end
