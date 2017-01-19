@@ -12,6 +12,7 @@ class IncidentReportsController < ApplicationController
     if @incident_report.save
       LawFirmMailer.new_incident_report(@law_firm).deliver_now
       render json: @incident_report
+      redirect_to "/incident_reports/#{@incident_report.id}"
     end
   end
 
