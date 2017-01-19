@@ -1,0 +1,25 @@
+<h2>Hello <%= @law_firm.company_name %></h2>
+<p>You have a new incident report from <%= "#{@user.first_name} #{@user.last_name}" %></p>
+<p>Details:</p>
+<ul>
+  <li> <b>Description: </b><%= @incident_report.description %></li>
+  <li><b>Resources invilved:</b></li>
+  <% if @incident_report.police_involved == true %>
+    <li>Police</li>
+  <% end %>
+  <% if @incident_report.ambulance_involved == true %>
+    <li>Ambulance</li>
+  <% end %>
+  <li>Private health</li>
+  <% if @incident_report.private_health == true %>
+    <li>Yes</li>
+  <% else %>
+    <li>No</li>
+  <% end %>
+  <% if @incident_report.additional_information != nil %>
+    <li><b>Additional information</b><%= @incident_report.additional_information %></li>
+  <% end %>
+  <li><b>Location:</b>
+    <iframe width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %>&key=AIzaSyBgtIXhRRr5VO_FBRgQSycpmVaSnms8Spc" allowfullscreen></iframe>
+  </li>
+</ul>
