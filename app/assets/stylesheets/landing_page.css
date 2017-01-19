@@ -15,6 +15,23 @@
   text-align: center;
 }
 
+.image img {
+  width: 100%;
+  height: auto;
+}
+
 .link {
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  div.col-md-4 {
+      width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-horizontal label.control-label {
+    text-align: left;
+  }
 }
