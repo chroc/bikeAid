@@ -4,7 +4,7 @@
 }
 
 .nav>li span:focus, .nav>li span:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -15,24 +15,24 @@
 }
 
 .navbar-brand, .navbar-nav>li span {
-    text-shadow: 0 1px 0 rgba(255,255,255,.25);
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 
 .navbar-nav>li span {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
 }
 
 .nav>li span {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
 }
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
 input.nav_input {

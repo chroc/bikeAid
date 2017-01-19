@@ -15,8 +15,6 @@ class IncidentReportsController < ApplicationController
       LawFirmMailer.new_incident_report(@law_firm, current_user, @incident_report).deliver_now
       #render json: @incident_report
       redirect_to "/incident_reports/#{@incident_report.id}"
-    else
-      binding.pry
     end
   end
 
