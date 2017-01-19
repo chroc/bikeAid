@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get '/admin', to: 'admins#index'
 
-  get '/users/login', to: 'users#login'
+  get '/login', to: 'sessions#new'
+
+  post '/logout', to: 'sessions#destroy'
 
   resources :incident_reports
 
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :law_firms
 
-  resources :login
+  resources :sessions, only: [:new, :create, :destroy]
 
   get '/resources', to: 'resources#resources'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

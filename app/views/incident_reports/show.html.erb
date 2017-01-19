@@ -6,3 +6,5 @@
 <p> <b>Ambulance involved: </b> <%= @incident_report.ambulance_involved %></p>
 <p> <b>Private health: </b> <%= @incident_report.private_health %></p>
 <p> <b>Additional information: </b> <%= @incident_report.additional_information %></p>
+
+<a href="/incident_reports/<%= @incident_report.id %>/edit">Edit incident</a>
