@@ -1,12 +1,12 @@
 class IncidentReportsController < ApplicationController
   before_action :grab_incidents, only: [:edit, :show, :destroy, :update]
+  # before_action :users_incidents, only: [:edit, :show, :destroy, :update]
 
   def new
   end
 
   def create
     @incident_report = IncidentReport.new(incident_report_params)
-
     if @incident_report.save
       render json: @incident_report
     end
@@ -38,5 +38,9 @@ class IncidentReportsController < ApplicationController
   def grab_incidents
     @incident_report = IncidentReport.find_by(id: params[:id])
   end
+
+  # def users_incidents
+  #
+  # end
 
 end
