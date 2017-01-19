@@ -5,8 +5,9 @@ class IncidentReportsController < ApplicationController
 
   def create
     @incident_report = IncidentReport.new(incident_report_params)
-
+    @law_firm = LawFirm.find_by(id: @incident_report.law_firm_id)
     if @incident_report.save
+      LawFirmMailer.new_incident_report(@law_firm).deliver_now
       render json: @incident_report
     end
   end
@@ -34,7 +35,7 @@ class IncidentReportsController < ApplicationController
   end
 
   def incident_report_params
-    params.permit(:location, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information)
+    params.permit(:location, :date, :description, :police_involved, :ambulance_involved, :private_health, :additional_information, :user_id, :law_frim_id)
   end
 
 end
