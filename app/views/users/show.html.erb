@@ -1,18 +1,22 @@
-<h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
-<p> <b>Email: </b> <%= @user.email %></p>
-<p> <b>Address: </b> <%= @user.address %></p>
-<p> <b>Phone: </b> <%= @user.phone %></p>
-<p> <b>City: </b> <%= @user.city %></p>
-<p> <b>State: </b> <%= @user.state %></p>
-<p> <b>Postcode: </b> <%= @user.postcode %></p>
-<p> <b>Phone: </b> <%= @user.phone %></p>
-<p> <b>Post Code: </b> <%= @user.postcode %></p>
+<div class="container">
+  <div class="resources">
+    <h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
+    <p> <b>Email: </b> <%= @user.email %></p>
+    <p> <b>Address: </b> <%= @user.address %></p>
+    <p> <b>Phone: </b> <%= @user.phone %></p>
+    <p> <b>City: </b> <%= @user.city %></p>
+    <p> <b>State: </b> <%= @user.state %></p>
+    <p> <b>Postcode: </b> <%= @user.postcode %></p>
+    <p> <b>Phone: </b> <%= @user.phone %></p>
+    <p> <b>Post Code: </b> <%= @user.postcode %></p>
 
-<a href="/users/<%= @user.id %>/edit">Edit user</a>
+    <a href="/users/<%= @user.id %>/edit">Edit user</a>
 
-<h3>My Incident Reports</h3>
-<ul>
-  <% @incident_reports.each do |incident| %>
-    <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} - #{incident.address}" %></a></li>
-  <% end %>
-</ul>
+    <h3>My Incident Reports</h3>
+    <ul>
+      <% @incident_reports.each do |incident| %>
+        <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} - #{incident.address}" %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

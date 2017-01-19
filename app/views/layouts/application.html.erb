@@ -50,12 +50,13 @@
               <li><a href="/login">Login</a></li>
             <% end %>
             <% if logged_in? %>
+              <li><span>
               <form action="/logout" method="post">
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                 <input type="hidden" name="_method" value="destroy" />
-                <li>
-                  <input type="submit" value="Logout" />
-                </li>
+
+                  <input class='nav_input' type="submit" value="Logout" />
+                </span></li>
               </form>
             <% end %>
         </ul>
