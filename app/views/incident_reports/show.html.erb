@@ -1,5 +1,5 @@
 <h2><%= @incident_report.description %></h2>
-<p> <b>Location: </b> <%= @incident_report.address %></p>
+<p> <b>Location: </b><%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %></p>
 <iframe width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %>&key=AIzaSyBgtIXhRRr5VO_FBRgQSycpmVaSnms8Spc" allowfullscreen></iframe>
 <p> <b>Date: </b> <%= @incident_report.date %></p>
 <p> <b>Police involved: </b> <%= @incident_report.police_involved %></p>

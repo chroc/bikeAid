@@ -5,7 +5,7 @@ class LawFirmMailer < ApplicationMailer
     @law_firm = law_firm
     @user = user
     @incident_report = incident_report
-    mail(to: "chroc7@icloud.com", subject: "Incident Report created")
+    mail(to: @law_firm.email, subject: "New Incident Report")
   end
 
 end
