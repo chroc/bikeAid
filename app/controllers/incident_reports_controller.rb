@@ -8,12 +8,15 @@ class IncidentReportsController < ApplicationController
 
   def create
     @incident_report = IncidentReport.new(incident_report_params)
-    @law_firm = LawFirm.find_by(id: @incident_report.law_firm_id)
+    @law_firm = LawFirm.find_by(id: params[:lawFirm])
     @incident_report.user = current_user
+    @incident_report.law_firm = @law_firm
     if @incident_report.save
       LawFirmMailer.new_incident_report(@law_firm, current_user, @incident_report).deliver_now
-      render json: @incident_report
+      #render json: @incident_report
       redirect_to "/incident_reports/#{@incident_report.id}"
+    else
+      binding.pry
     end
   end
 
