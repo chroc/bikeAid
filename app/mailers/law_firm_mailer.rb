@@ -5,6 +5,7 @@ class LawFirmMailer < ApplicationMailer
     @law_firm = law_firm
     @user = user
     @incident_report = incident_report
+    @location = @incident_report.address.split(' ').join('+') + '+' + @incident_report.city.split(' ').join('+') + '+' + @incident_report.state.split(' ').join('+')
     mail(to: @law_firm.email, subject: "New Incident Report")
   end
 
