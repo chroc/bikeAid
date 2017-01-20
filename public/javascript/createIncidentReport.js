@@ -52,7 +52,7 @@ $(document).ready(function() {
                   },
                   date: {
                       message: 'Please supply a vaild date',
-                      format: 'DD/MM/YYYY'
+                      format: 'YYYY/MM/DD'
                   }
               }
           },
