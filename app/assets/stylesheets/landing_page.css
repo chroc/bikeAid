@@ -24,6 +24,13 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  ul.navbar-nav {
+    float: right;
+    margin: 0;
+  }
+}
+
 @media (min-width: 992px) {
   div.col-md-4 {
   width: 100%;
