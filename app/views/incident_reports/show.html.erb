@@ -5,10 +5,30 @@
     <p> <b>Location: </b><%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %></p>
     <iframe width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %>&key=AIzaSyBgtIXhRRr5VO_FBRgQSycpmVaSnms8Spc" allowfullscreen></iframe>
     <p> <b>Date: </b> <%= @incident_report.date %></p>
-    <p> <b>Police involved: </b> <%= @incident_report.police_involved %></p>
-    <p> <b>Ambulance involved: </b> <%= @incident_report.ambulance_involved %></p>
-    <p> <b>Private health: </b> <%= @incident_report.private_health %></p>
-    <p> <b>Additional information: </b> <%= @incident_report.additional_information %></p>
+    <p> <b>Police involved: </b>
+      <% if @incident_report.police_involved == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p> <b>Ambulance involved: </b>
+      <% if @incident_report.ambulance_involved == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p> <b>Private health: </b>
+      <% if @incident_report.private_health == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <% if @incident_report.additional_information != "" %>
+      <p> <b>Additional information: </b> <%= @incident_report.additional_information %></p>
+    <% end %>
 
     <a href="/incident_reports/<%= @incident_report.id %>/edit">Edit incident</a>
   </div>
