@@ -8,6 +8,6 @@
 <h2>Incident Reports</h2>
 <ul>
   <% @incident_reports.each do |incident| %>
-    <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} #{incident.location}" %></a></li>
+    <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} #{incident.address}" %></a></li>
   <% end %>
 </ul>

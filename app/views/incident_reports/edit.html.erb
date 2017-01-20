@@ -5,8 +5,14 @@
   <input type="hidden" name="_method" value="put">
   <label>Description</label>
   <input type="text" name="description" value="<%= @incident_report.description %>"><br>
-  <label>Location</label>
-  <input type="text" name="location" value="<%= @incident_report.location %>"><br>
+  <label>Address</label>
+  <input type="text" name="address" value="<%= @incident_report.address %>"><br>
+  <label>City</label>
+  <input type="text" name="city" value="<%= @incident_report.city %>"><br>
+  <label>State</label>
+  <input type="text" name="state" value="<%= @incident_report.state %>"><br>
+  <label>Postcode</label>
+  <input type="text" name="postcode" value="<%= @incident_report.postcode %>"><br>
   <label>Date</label>
   <input type="date" name="date" value="<%= @incident_report.date %>"><br>
   <label>Police involved</label>
@@ -15,6 +21,8 @@
   <input type="text" name="ambulance_involved" value="<%= @incident_report.ambulance_involved %>"><br>
   <label>Private health</label>
   <input type="text" name="private_health" value="<%= @incident_report.private_health %>"><br>
+  <label>Additional information</label>
+  <input type="text" name="additional_information" value="<%= @incident_report.additional_information %>"><br>
 
   <button type="submit">Update</button>
 </form>
