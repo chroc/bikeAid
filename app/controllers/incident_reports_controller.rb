@@ -14,14 +14,14 @@ class IncidentReportsController < ApplicationController
     if @incident_report.save
       LawFirmMailer.new_incident_report(@law_firm, current_user, @incident_report).deliver_now
       flash[:success] = 'You have successfully submitted your incident report'
-      redirect_to @incident_report
+      render json: @incident_report
     end
   end
 
   def update
     @incident_report.update(incident_report_params)
     if @incident_report.save
-      redirect_to @incident_report
+      render json: @incident_report
     end
   end
 

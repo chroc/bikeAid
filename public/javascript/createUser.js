@@ -124,8 +124,10 @@ $(document).ready(function() {
           var bv = $form.data('bootstrapValidator');
 
           // Use Ajax to submit form data
-          $.post($form.attr('action'), $form.serialize(), function(result) {
-              console.log(result);
+          $.post($form.attr('action'), $form.serialize(), function(response) {
+            setTimeout(function() {
+              window.location = '/users/' + user.id
+            }, '2000');
           }, 'json');
       });
 });

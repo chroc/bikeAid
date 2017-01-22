@@ -15,7 +15,7 @@
     <h3>My Incident Reports</h3>
     <ul>
       <% @incident_reports.each do |incident| %>
-        <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.description} - #{incident.address}" %></a></li>
+        <li> <a href="/incident_reports/<%= incident.id %>"><%= "#{incident.date}" %> <b> - </b><%= "#{incident.address}" %></a></li>
       <% end %>
     </ul>
   </div>

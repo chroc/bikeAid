@@ -1,9 +1,10 @@
 <div class="container">
   <div class ="resources">
 
-    <h2><%= @incident_report.description %></h2>
+    <h2>Incident Report: <%= @incident_report.id%></h2>
     <p> <b>Location: </b><%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %></p>
     <iframe width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<%= "#{@incident_report.address}, #{@incident_report.city}, #{@incident_report.state}" %>&key=AIzaSyBgtIXhRRr5VO_FBRgQSycpmVaSnms8Spc" allowfullscreen></iframe>
+    <p> <b>Description: </b> <%= @incident_report.description%></p>
     <p> <b>Date: </b> <%= @incident_report.date %></p>
     <p> <b>Police involved: </b>
       <% if @incident_report.police_involved == true %>
